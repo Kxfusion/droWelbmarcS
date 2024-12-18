@@ -1,0 +1,8 @@
+.board-container {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    background-color: #181818;
+    max-width: 50%;
+    max-height: 20%;
+}

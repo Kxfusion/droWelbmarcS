@@ -1,0 +1,8 @@
+.outer-tile {
+    border-style: outset;
+    border-radius: 5%;
+    border-width: 1px;
+    padding: 5px 2px;
+    background-color: #404040;
+    flex-grow: 1;
+}
