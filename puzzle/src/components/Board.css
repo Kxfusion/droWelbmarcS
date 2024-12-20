@@ -3,6 +3,8 @@
     margin: auto;
     flex-direction: row;
     background-color: #181818;
-    max-width: 50%;
-    max-height: 20%;
+    width: 100%;
+    min-height: fit-content;
+    gap: 4px;
+    cursor: grab;
 }

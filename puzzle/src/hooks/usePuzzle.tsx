@@ -44,8 +44,7 @@ export function usePuzzle() {
 
     const generateTiles = (word: string) => {
         return word.split('').map((char, index) => {
-            console.log(char)
-            return <Tile letter={char} key={index} />;
+            return <Tile letter={char} key={index} id={`${index}`} />;
         });
     };
 
