@@ -1,12 +1,16 @@
-import type React from "react";
+import { useTiles } from '../hooks/useTiles';
 import './Board.css';
 
-type BoardProps = React.PropsWithChildren<{}>
+type BoardProps = {
+    word: string,
+};
 
-export function Board({ children }: BoardProps) {
+export function Board({ word }: BoardProps) {
+    const { tiles } = useTiles({ word });
+
     return (
         <div className="board-container">
-            {children}
+            {tiles}
         </div>
     );
 };

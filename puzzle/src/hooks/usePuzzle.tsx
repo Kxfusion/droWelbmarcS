@@ -1,5 +1,3 @@
-import { Tile } from "../components/Tile";
-
 export function usePuzzle() {
     const getWordOfTheDay = async () => {
         const result = await fetch("/api/word-of-the-day");
@@ -42,15 +40,8 @@ export function usePuzzle() {
         return finalWord.join("");
     }
 
-    const generateTiles = (word: string) => {
-        return word.split('').map((char, index) => {
-            return <Tile letter={char} key={index} id={`${index}`} />;
-        });
-    };
-
     return {
         getWordOfTheDay,
         randomizeOrder,
-        generateTiles,
     };
 }

@@ -8,3 +8,11 @@
     flex: 1 1 auto;
     z-index: 9999;
 }
+
+.picked-up {
+    left: 0;
+    top: 0;
+    cursor: none;
+    opacity: 60%;
+    position: absolute;
+}

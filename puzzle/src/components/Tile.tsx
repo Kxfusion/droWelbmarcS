@@ -22,15 +22,11 @@ export function Tile({ letter, id }: TileProps) {
         }
 
         console.log(tile.current.offsetWidth);
-        tile.current.style.left = "0";
-        tile.current.style.top = "0";
-        tile.current.style.cursor = "none";
-        tile.current.style.opacity = "60%";
-        tile.current.style.position = "absolute";
-        tile.current.style.minWidth = `45px`;
-        tile.current.style.minHeight = `30px`;
+        
+        tile.current.style.minWidth = `${tile.current.offsetWidth}px`;
         offsetWidth = tile.current.offsetWidth;
         offsetHeight = tile.current.offsetHeight;
+        tile.current.className = "picked-up outer-tile";
         tile.current.onpointermove = pointerMove;
         tile.current.setPointerCapture(event.pointerId);
     };
@@ -41,6 +37,7 @@ export function Tile({ letter, id }: TileProps) {
         }
 
         tile.current.removeAttribute("style");
+        tile.current.className = "outer-tile";
         tile.current.onpointermove = null;
         tile.current.releasePointerCapture(event.pointerId);
     };
